@@ -1,6 +1,6 @@
 # TSLint Rules for Playwright Test Files
 
-![Build and Test](https://github.com/{username}/tslint-rules/actions/workflows/main.yml/badge.svg)
+![Build and Test](https://github.com/deepakkamboj/eslint-plugin-playwright-extra/actions/workflows/main.yml/badge.svg)
 
 A collection of TSLint rules specifically designed for maintaining clean and consistent Playwright test code. These rules help prevent common testing pitfalls and enforce best practices in Playwright test files.
 
