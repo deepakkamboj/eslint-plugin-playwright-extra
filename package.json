@@ -8,7 +8,7 @@
   ],
   "scripts": {
     "dev": "npm run build && tslint --project tsconfig.dev.json",
-    "test": "npm run build && jest",
+    "test": "jest",
     "build": "tsc"
   },
   "devDependencies": {
@@ -20,18 +20,28 @@
     "typescript": "^5.3.3"
   },
   "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node",
+    "roots": [
+      "<rootDir>/rules/"
+    ],
+    "setupFilesAfterEnv": [
+      "<rootDir>/config/jest/expect.js"
+    ],
     "testMatch": [
-      "<rootDir>/rules/**/?(*.)spec.ts"
+      "**/*.spec.ts"
     ],
     "transform": {
-      "^.+\\.ts$": "ts-jest"
+      "^.+\\.ts$": [
+        "ts-jest",
+        {
+          "tsconfig": "tsconfig.json"
+        }
+      ]
     },
     "testPathIgnorePatterns": [
-      "<rootDir>/node_modules/",
-      "<rootDir>/dist/"
-    ],
-    "setupFiles": [
-      "<rootDir>/config/jest/expect.js"
+      "/node_modules/",
+      "/dist/"
     ],
     "moduleFileExtensions": [
       "ts",
