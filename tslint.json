@@ -1,0 +1,6 @@
+{
+  "rulesDirectory": ["./rules"],
+  "rules": {
+    "no-date-now": true
+  }
+}
